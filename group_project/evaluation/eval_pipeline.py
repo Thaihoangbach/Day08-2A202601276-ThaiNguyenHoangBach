@@ -1,28 +1,3 @@
-"""
-RAG Evaluation Pipeline.
-
-Framework: RAGAS (chọn vì tích hợp tốt với Q&A + context, output là DataFrame
-dễ tổng hợp thành bảng markdown, và metrics faithfulness/relevancy/recall/precision
-đều có sẵn native, không cần tự viết feedback function như TruLens).
-
-Yêu cầu:
-    1. Load golden_dataset.json (≥15 Q&A pairs)
-    2. Chạy RAG pipeline trên từng question
-    3. Evaluate với 4 metrics: faithfulness, relevance, context_recall, context_precision
-    4. So sánh A/B ít nhất 2 configs
-    5. Export results ra results.md
-
-Lưu ý rate limit nếu dùng model OpenRouter ":free": RAGAS/DeepEval gọi LLM RẤT NHIỀU LẦN
-(không phải 1 lần/câu hỏi mà nhiều lần/metric/câu hỏi). Model free của OpenRouter giới hạn
-50 request/ngày CHO CẢ TÀI KHOẢN (không phải theo model hay theo API key — đổi model free
-khác hay tạo key mới KHÔNG reset quota). Nếu chạy full 15+ câu hỏi mà bị rate limit giữa
-chừng, thử giảm xuống subset 5 câu để chạy kịp trong buổi, hoặc nạp $10 credit để mở khóa
-1000 request/ngày.
-
-Cài đặt thêm cho phần LLM/Embeddings wrapper của RAGAS:
-    pip install langchain-openai langchain-huggingface
-"""
-
 import inspect
 import json
 import os
@@ -33,12 +8,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# -----------------------------------------------------------------------------
-# Path setup
-# -----------------------------------------------------------------------------
-# File này nằm tại: <root>/group_project/evaluation/eval_pipeline.py
-# src/ nằm tại:     <root>/src/
-# => cần thêm <root> (3 cấp cha) vào sys.path để import được "src.task10_generation"
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
@@ -77,9 +46,6 @@ def _call_pipeline(pipeline_fn, question: str, params: dict) -> dict:
     return pipeline_fn(question, **accepted)
 
 
-# =============================================================================
-# RAGAS LLM / Embeddings config (trỏ về OpenRouter, khớp với Task 10)
-# =============================================================================
 
 def _get_ragas_llm():
     """
@@ -98,8 +64,6 @@ def _get_ragas_llm():
         )
 
     base_url = "https://openrouter.ai/api/v1" if os.getenv("OPENROUTER_API_KEY") else None
-    # Model dùng để evaluate — nên chọn model đủ mạnh để chấm điểm chính xác,
-    # có thể khác với LLM_MODEL sinh câu trả lời ở Task 10.
     eval_model = os.getenv("RAGAS_EVAL_MODEL", "openai/gpt-4o-mini")
 
     chat = ChatOpenAI(
