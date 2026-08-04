@@ -83,7 +83,7 @@ Xem code mẫu (DeepEval/RAGAS/TruLens) chi tiết trong `README.md` gốc mục
 |Lâm Vũ |2A202601914 |Task 4 5 6 |Done |
 |Nguyễn Đức Thành |2A202601872 |Task 7 8 |Done |
 |Nguyễn Thành Công |2A202601396 |Task 9 10 |Done |
-|Nguyễn Đình Quốc |A202601935 |eval |Done|
+|Nguyễn Đình Quốc |2A202601935 |eval |Done|
 
 ---
 
