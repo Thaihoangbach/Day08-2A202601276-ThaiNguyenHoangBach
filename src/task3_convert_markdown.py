@@ -41,7 +41,15 @@ def convert_legal_docs():
             # output_path = output_dir / f"{filepath.stem}.md"
             # output_path.write_text(result.text_content, encoding="utf-8")
             # print(f"  ✓ Saved: {output_path}")
-            raise NotImplementedError("Implement convert_legal_docs")
+            result = md.convert(str(filepath))
+
+            output_path = output_dir / f"{filepath.stem}.md"
+
+            output_path.write_text(
+            result.text_content,
+            encoding="utf-8",
+            )
+            print(f"  ✓ Saved: {output_path}")
 
 
 def convert_news_articles():
@@ -65,7 +73,26 @@ def convert_news_articles():
             # content = header + data.get("content_markdown", "")
             # output_path.write_text(content, encoding="utf-8")
             # print(f"  ✓ Saved: {output_path}")
-            raise NotImplementedError("Implement convert_news_articles")
+            data = json.loads(
+                filepath.read_text(encoding="utf-8")
+            )
+
+            output_path = output_dir / f"{filepath.stem}.md"
+
+            header = (
+    f"# {data.get('title', 'Unknown')}\n\n"
+    f"**Source:** {data.get('url', 'N/A')}\n"
+    f"**Crawled:** {data.get('date_crawled', 'N/A')}\n\n"
+    "---\n\n"
+            )
+
+            content = header + data.get("content_markdown", "")
+
+            output_path.write_text(
+                content,
+                encoding="utf-8",
+            )
+            print(f"  ✓ Saved: {output_path}")
 
 
 def convert_all():

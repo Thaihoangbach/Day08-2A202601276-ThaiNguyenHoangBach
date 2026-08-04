@@ -27,6 +27,7 @@ và chỉ dùng nguồn công khai/được phép chia sẻ.
 
 from pathlib import Path
 
+
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
 
 
