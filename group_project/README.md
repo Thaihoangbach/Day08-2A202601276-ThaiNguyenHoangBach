@@ -79,10 +79,11 @@ Xem code mẫu (DeepEval/RAGAS/TruLens) chi tiết trong `README.md` gốc mục
 
 | Thành viên | MSSV | Nhiệm vụ | Trạng thái |
 |-----------|------|----------|------------|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|Thái Nguyễn Hoàng Bách |2A202601276 |Task 1 2 3 |Done |
+|Lâm Vũ |2A202601914 |Task 4 5 6 |Done |
+|Nguyễn Đức Thành |2A202601872 |Task 7 8 |Done |
+|Nguyễn Thành Công |2A202601396 |Task 9 10 |Done |
+|Nguyễn Đình Quốc |A202601935 |eval |Done|
 
 ---
 

@@ -1,17 +1,77 @@
 [
   {
     "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
-    "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (24 giờ đối với thực phẩm tươi sống/đông lạnh).",
-    "expected_context": "Trang Returns and Refunds Policy, mục Return/Refund Eligibility"
+    "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (24 giờ đối với thực phẩm tươi sống hoặc đông lạnh).",
+    "expected_context": "Returns and Refunds Policy - Return/Refund Eligibility"
   },
   {
     "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
-    "expected_answer": "ShopeePay Wallet, thẻ tín dụng/ghi nợ, trả góp qua thẻ, QR Code, chuyển khoản qua app ngân hàng, thẻ NAPAS, Apple Pay, Google Pay, và COD.",
-    "expected_context": "Trang Payment Methods Overview"
+    "expected_answer": "Shopee hỗ trợ ShopeePay Wallet, thẻ tín dụng hoặc ghi nợ, trả góp qua thẻ, QR Code, chuyển khoản ngân hàng, thẻ NAPAS, Apple Pay, Google Pay và COD.",
+    "expected_context": "Payment Methods Overview"
   },
   {
     "question": "Người bán không được đăng bán những sản phẩm nào?",
-    "expected_answer": "Hàng giả/nhái, sản phẩm bất hợp pháp, vi phạm sở hữu trí tuệ, và các mặt hàng nằm trong danh sách cấm của sàn.",
-    "expected_context": "Trang Product Listing Regulations, mục Prohibited Content"
+    "expected_answer": "Người bán không được đăng bán hàng giả, hàng nhái, sản phẩm bất hợp pháp, hàng vi phạm sở hữu trí tuệ và các mặt hàng bị cấm.",
+    "expected_context": "Product Listing Regulations - Prohibited Content"
+  },
+  {
+    "question": "Khi nào người mua được yêu cầu hoàn tiền?",
+    "expected_answer": "Người mua có thể yêu cầu hoàn tiền khi đơn hàng đủ điều kiện trả hàng hoặc phát sinh sự cố theo chính sách của Shopee.",
+    "expected_context": "Returns and Refunds Policy"
+  },
+  {
+    "question": "ShopeePay có thể được sử dụng để thanh toán đơn hàng không?",
+    "expected_answer": "Có. ShopeePay là một trong những phương thức thanh toán được Shopee hỗ trợ.",
+    "expected_context": "Payment Methods Overview"
+  },
+  {
+    "question": "COD là gì?",
+    "expected_answer": "COD là phương thức thanh toán khi nhận hàng.",
+    "expected_context": "Payment Methods Overview"
+  },
+  {
+    "question": "Người mua cần cung cấp bằng chứng gì khi yêu cầu trả hàng?",
+    "expected_answer": "Người mua cần cung cấp hình ảnh hoặc video chứng minh tình trạng sản phẩm theo yêu cầu của Shopee.",
+    "expected_context": "Returns and Refunds Policy"
+  },
+  {
+    "question": "Nếu quá thời hạn trả hàng thì người mua còn được yêu cầu hoàn tiền không?",
+    "expected_answer": "Thông thường không, trừ các trường hợp ngoại lệ theo chính sách của Shopee.",
+    "expected_context": "Returns and Refunds Policy - Return Window"
+  },
+  {
+    "question": "Shopee có hỗ trợ thanh toán bằng Apple Pay không?",
+    "expected_answer": "Có, Shopee hỗ trợ Apple Pay tại các khu vực được áp dụng.",
+    "expected_context": "Payment Methods Overview"
+  },
+  {
+    "question": "Shopee có hỗ trợ Google Pay không?",
+    "expected_answer": "Có, Google Pay là một trong các phương thức thanh toán được hỗ trợ.",
+    "expected_context": "Payment Methods Overview"
+  },
+  {
+    "question": "Shopee xử lý dữ liệu cá nhân của người dùng nhằm mục đích gì?",
+    "expected_answer": "Dữ liệu cá nhân được sử dụng để cung cấp dịch vụ, xử lý giao dịch, hỗ trợ khách hàng và cải thiện trải nghiệm người dùng.",
+    "expected_context": "Privacy Policy"
+  },
+  {
+    "question": "Shopee có chia sẻ dữ liệu cá nhân cho bên thứ ba không?",
+    "expected_answer": "Shopee chỉ chia sẻ dữ liệu trong các trường hợp được quy định trong chính sách bảo mật hoặc theo yêu cầu pháp luật.",
+    "expected_context": "Privacy Policy"
+  },
+  {
+    "question": "Người dùng có thể cập nhật thông tin tài khoản của mình không?",
+    "expected_answer": "Có. Người dùng có thể cập nhật thông tin cá nhân trong phần cài đặt tài khoản.",
+    "expected_context": "Privacy Policy"
+  },
+  {
+    "question": "Người bán có trách nhiệm gì đối với thông tin sản phẩm?",
+    "expected_answer": "Người bán phải đảm bảo thông tin sản phẩm chính xác, đầy đủ và tuân thủ quy định của Shopee.",
+    "expected_context": "Product Listing Regulations"
+  },
+  {
+    "question": "Shopee có cấm đăng bán hàng vi phạm quyền sở hữu trí tuệ không?",
+    "expected_answer": "Có. Shopee nghiêm cấm đăng bán các sản phẩm vi phạm quyền sở hữu trí tuệ.",
+    "expected_context": "Product Listing Regulations - Intellectual Property"
   }
 ]
